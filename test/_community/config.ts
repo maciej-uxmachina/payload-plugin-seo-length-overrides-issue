@@ -6,6 +6,7 @@ import { buildConfigWithDefaults } from '../buildConfigWithDefaults.js'
 import { devUser } from '../credentials.js'
 import { MediaCollection } from './collections/Media/index.js'
 import { PostsCollection, postsSlug } from './collections/Posts/index.js'
+import { LandingPage } from './globals/LandingPage/index.js'
 import { MenuGlobal } from './globals/Menu/index.js'
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -92,6 +93,7 @@ export default buildConfigWithDefaults({
   }),
   cors: ['http://localhost:3000', 'http://localhost:3001'],
   globals: [
+    LandingPage,
     MenuGlobal,
     {
       slug: 'custom-ts',
